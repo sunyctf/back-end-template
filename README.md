@@ -8,4 +8,5 @@ Online Page
 
 ## boot-jQuery
 
-- [炫酷Bootstrap管理后台模板-Fonik](https://sunyctf.github.io/back-end-template/新增炫酷Bootstrap管理后台模板-Fonik/index.html)
+- [炫酷Bootstrap管理后台模板-Fonik](https://sunyctf.github.io/back-end-template/炫酷Bootstrap管理后台模板-Fonik/index.html)
+
