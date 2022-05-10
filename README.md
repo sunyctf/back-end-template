@@ -1,7 +1,3 @@
-# 网站后台管理模板
-
-
-
 ## 在线预览
 
 [Online Page](https://sunyctf.github.io/back-end-template/)
