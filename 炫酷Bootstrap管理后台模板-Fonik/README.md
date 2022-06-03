@@ -34,8 +34,6 @@
 
 - [Demo预览](https://sunyctf.github.io/front-end-demos/css-effects/HTML5+CSS3新拟态鼠标经过特效/index.html)
 
-- ![622aad056f54a248](C:\Users\儒雅的烤地瓜\Desktop\622aad056f54a248.png)
-
 #### 软件架构
 软件架构说明
 
