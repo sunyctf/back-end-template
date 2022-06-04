@@ -32,7 +32,7 @@
 
   　○　7+图表类库
 
-- [Demo预览](https://sunyctf.github.io/front-end-demos/css-effects/HTML5+CSS3新拟态鼠标经过特效/index.html)
+- [Demo预览](https://sunyctf.github.io/front-end-demos/css-effects/炫酷Bootstrap管理后台模板-Fonik/index.html)
 
 #### 软件架构
 软件架构说明
