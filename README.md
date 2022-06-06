@@ -9,4 +9,5 @@
 ## boot-jQuery
 
 - [炫酷Bootstrap管理后台模板-Fonik](https://sunyctf.github.io/back-end-template/炫酷Bootstrap管理后台模板-Fonik/index.html)
+- [医院医生就诊OA系统管理模板-Mednalytics](https://sunyctf.github.io/back-end-template/医院医生就诊OA系统管理模板-Mednalytics/index.html)
 
