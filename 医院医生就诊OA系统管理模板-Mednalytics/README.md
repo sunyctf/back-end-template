@@ -3,7 +3,7 @@
 #### 介绍
 
 - 一款基于bootstrap构建，蓝色响应式的医院医疗服务系统管理，医生预约，医院医生OA系统，医院病人管理，医生就诊，医生办公管理模板。响应式布局，可定制修改使用。
-- [Demo预览](https://sunyctf.github.io/front-end-demos/css-effects/医院医生就诊OA系统管理模板-mednalytics/index.html)
+- [Demo预览](https://sunyctf.github.io/back-end-template/医院医生就诊OA系统管理模板-mednalytics/index.html)
 
 #### 软件架构
 软件架构说明
