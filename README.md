@@ -12,4 +12,5 @@
 - [医院医生就诊OA系统管理模板-Mednalytics](https://sunyctf.github.io/back-end-template/医院医生就诊OA系统管理模板-Mednalytics/index.html)
 - [简单的layui网站后台模板](https://sunyctf.github.io/back-end-template/简单的layui网站后台模板/index.html)
 - [layui企业网站后台管理通用模板](https://sunyctf.github.io/back-end-template/layui企业网站后台管理通用模板/index.html)
+- [大气黑色常用后台管理网站模板](https://sunyctf.github.io/back-end-template/大气黑色常用后台管理网站模板/index.html)
 
