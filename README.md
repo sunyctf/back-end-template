@@ -13,4 +13,5 @@
 - [简单的layui网站后台模板](https://sunyctf.github.io/back-end-template/简单的layui网站后台模板/index.html)
 - [layui企业网站后台管理通用模板](https://sunyctf.github.io/back-end-template/layui企业网站后台管理通用模板/index.html)
 - [大气黑色常用后台管理网站模板](https://sunyctf.github.io/back-end-template/大气黑色常用后台管理网站模板/index.html)
+- [简洁商城系统后台管理模板](https://sunyctf.github.io/back-end-template/简洁商城系统后台管理模板/index.html)
 
