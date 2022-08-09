@@ -15,4 +15,5 @@
 - [大气黑色常用后台管理网站模板](https://sunyctf.github.io/back-end-template/大气黑色常用后台管理网站模板/index.html)
 - [简洁商城系统后台管理模板](https://sunyctf.github.io/back-end-template/简洁商城系统后台管理模板/index.html)
 - [Vue+ElementUI的后台管理系统框架](https://sunyctf.github.io/back-end-template/Vue+ElementUI的后台管理系统框架/index.html)
+- [layui网站后台管理系统框架模板](https://sunyctf.github.io/back-end-template/layui网站后台管理系统框架模板/index.html)
 
