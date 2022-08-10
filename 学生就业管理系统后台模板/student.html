@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/student.css">
+    <script src="js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="header clearfix">
+                <div class="top fl">当前位置>个人信息</div>
+                <div class="bottom fr">
+                    <a id="emit" href="javascript:;">编辑</a>
+                    <a id="keep" href="javascript:;">保存</a>
+                </div>
+            </div>
+            <div class="main">
+                <!--基础信息-->
+                <div class="BasicInformation">
+                    <div class="title">
+                        基础信息
+                    </div>
+                </div>
+                <div class="content clearfix">
+                    <div class="left fl">
+                        <div>
+                            <label for="">姓名：</label>
+                            <input id="stu_name" type="text" value="" disabled />
+                        </div>
+                        <div>
+                            <label for="">性别：</label>
+                            男：<input type="radio" name="sex" value="0" style="width: 20px; margin-top: 12px;">
+                            女：<input type="radio" name="sex" value="1" style="width: 20px;">
+                        </div>
+                        <div>
+                            <label for="">出生日期：</label>
+                            <input id="birthday" type="text" value="" disabled>
+                        </div>
+                        <div>
+                            <label for="">身份证号：</label>
+                            <input id="idNumber" class="id oInp" type="text" value="" disabled>
+                        </div>
+                    </div>
+                    <div class="right fr">
+                        <div>
+                            <label for="">学号：</label>
+                            <input id="xstu_id" type="number" value="" disabled>
+                        </div>
+                        <div>
+                            <label for="">民族：</label>
+                            <input id="national_name" type="text" value="" disabled>
+                        </div>
+                        <div class="label">
+                            <label for="">政治面貌：</label>
+                            <div class="option clearfix" id="politics">
+                                <a id="pl_name" href="javascript:;" class="fl"></a>
+                                <i class="fr"></i>
+                                <ul>
+                                    <li>中共党员</li>
+                                    <li>中共预备党员</li>
+                                    <li>共青团员</li>
+                                    <li>群众</li>
+                                    <li>无党派人士</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="label">
+                            <label for="">独生子女：</label>
+                            <div class="option clearfix" id="child">
+                                <a href="javascript:;" class="fl">是</a>
+                                <i class="fr"></i>
+                                <ul>
+                                    <li>是</li>
+                                    <li>否</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--联系方式-->
+                <div class="BasicInformation">
+                    <div class="title">联系方式</div>
+                </div>
+                <div class="content clearfix">
+                    <div class="left fl">
+                        <div>
+                            <label for="">手机号码：</label>
+                            <input id="phone" type="number" value="" disabled>
+                        </div>
+                        <div>
+                            <label for="">QQ号码：</label>
+                            <input id="qq" type="number" value="" disabled>
+                        </div>
+                    </div>
+                    <div class="right fr">
+                        <div>
+                            <label for="">电子邮箱：</label>
+                            <input id="e_mail" type="text" value="" class="mailbox" disabled>
+                        </div>
+                    </div>
+                </div>
+                <!--辅导员信息-->
+                <div class="BasicInformation">
+                    <div class="title">
+                        辅导员信息
+                    </div>
+                </div>
+                <div class="content clearfix">
+                    <div class="left fl">
+                        <div>
+                            <label for="">姓名：</label>
+                            <input type="text" value="">
+                        </div>
+
+                    </div>
+                    <div class="right fr">
+                        <div>
+                            <label for="">电话号码：</label>
+                            <input type="number" value="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('#politics i').on('click', function() {
+            $(this).siblings('ul').show();
+        });
+        $('#politics ul li').on('click', function() {
+            var selTxt = $(this).text();
+            $('#politics a').text(selTxt);
+            $('#politics ul').hide();
+        });
+        $('#child i').on('click', function() {
+            $(this).siblings('ul').show();
+        });
+        $('#child ul li').on('click', function() {
+            var selTxt = $(this).text();
+            $('#child a').text(selTxt);
+            $('#child ul').hide();
+        });
+        $('#emit').on('click',function(){
+			$('input').removeAttr('disabled');
+		});
+		$('#keep').on('click',function(){
+			$('input').attr('disabled','disabled');
+		});
+    	$(document).ready(function(){
+    		$.ajax({
+	    		url: "http://101.201.154.205:9090/bm/bmList",
+	    		type: 'post',
+	    		data: {
+	    			t: Math.random()
+	    		},
+	    		dataType: 'jsonp',
+	    		'jsonp': 'callback'
+	    	}).then(function(res){
+	    		console.log(res)
+	//      		var stu_name = $('#stu_name').val();
+				for (var i=0; i<res.length; i++) {
+	    			$('#stu_name').attr('value',res[i].stu_name);
+	    			$('#sex').attr('value',res[i].sex);
+	    			$('#xstu_id').attr('value',res[i].xstu_id);
+	    			$('#idNumber').attr('value',res[i].idNumber);
+	    			$('#birthday').attr('value',res[i].birthday);
+	    			$('#national_name').attr('value',res[i].national_name);
+	    			$('#qq').attr('value',res[i].qq);
+	    			$('#phone').attr('value',res[i].phone);
+	    			$('#e_mail').attr('value',res[i].e_mail);
+	    			$('#pl_name').text(res[i].pl_name);
+	    		}
+	    	},function(){
+	    		console.log('error');
+	    	});
+    	});
+    </script>
+
+</body>
+</html>

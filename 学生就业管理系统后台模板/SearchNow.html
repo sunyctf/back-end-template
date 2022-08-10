@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>search</title>
+	<link rel="stylesheet" href="css/search-now.css">
+	<link rel="stylesheet" href="css/common.css">
+	<script src="js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	<div class="search-box clearfix">
+		<div class="search-inp">
+			<input type="text" id="inp" value="asd">
+		</div>
+		<div class="search-btn">
+			<button type="botton">搜索</button>
+		</div>
+		<div class="search-res" id="res-item">
+			<ul class="clearfix">
+				<li>隔壁老王</li>
+			</ul>
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function(){
+			// if($('#inp').val()){
+			// 	console.log('有东西')
+			// 	$('#res-item').show();
+			// }
+			// else{
+			// 	console.log('没东西')
+			// 	$('#res-item').hide();
+			// }
+			$('#inp').on('click',function(){
+				$('#res-item').show();
+				console.log(1)
+			});
+			if($('#inp').val() == ''){
+				$('#res-item').hide();
+			}
+		});
+	</script>
+</body>
+</html>

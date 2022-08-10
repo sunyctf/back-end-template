@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Title</title>
+		<link rel="stylesheet" href="css/common.css">
+		<link rel="stylesheet" type="text/css" href="css/StatisticalFigure.css"/>
+	</head>
+
+	<body>
+		<div class="container flgure">
+			<div class="content">
+				<ul class="clearfix info">
+					<li class="active">学生基本信息</li>
+					<li>薪资信息</li>
+					<li>就业信息</li>
+					<li>工作省份</li>
+				</ul>
+				<div class="basic">
+					<div class="basicInfo select active ">
+						<div id="leave-statistical">
+						</div>
+						<div class="leave">
+							<ul>
+								<li>学生人数 : 123</li>
+								<li>离校人数 : 100</li>
+								<li>在校人数 : 23</li>
+							</ul>
+						</div>
+						<div id="gender-statistical"></div>
+						<div>
+							<ul class="gender">
+								<li>学生人数 : 123</li>
+								<li>男生人数 : 90</li>
+								<li>女生人数 : 33</li>
+							</ul>
+						</div>
+						<div id="province-statistical"></div>
+						<div>
+							<ul class="province clearfix">
+								<li>学生人数 : 123</li>
+								<li>河北人数 : 33</li>
+								<li>河南人数 : 33</li>
+								<li>北京人数 : 33</li>
+								<li>山东人数 : 33</li>
+								<li>其他人数 : 33</li>
+							</ul>
+						</div>
+	
+					</div>
+					<div class="payInfo select ">
+						<div id="payInfo"></div>
+						<div id="payInfo1"></div>
+					</div>
+					<div class="employmentInfo select">
+						<div id="employment_industry"></div>
+						<div id="unit_properties" ></div>
+						<div id="postgraduate_employment" ></div>
+					</div>
+					<div class="provinceInfo select">
+						<div id="map"></div>
+						<span>北京&nbsp;就业人数<i>200</i>&nbsp;占总人数的<em>45%</em></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/echarts.min.js"></script>
+		<script src="js/china.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="js/StudentBasicInformation.js"></script>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script>
+			var list = [
+				{ value: 100, name: '离校' },
+				{ value: 23, name: '在校' }
+			];
+			data('leave-statistical', '学生在校离校统计表', list);
+			var list2 = [
+
+				{ value: 90, name: '男生' },
+				{ value: 33, name: '女生' }
+			];
+			data('gender-statistical', '男女比例统计表', list2);
+			var list3 = [
+				{ value: 90, name: '河北' },
+				{ value: 33, name: '河南' },
+				{ value: 33, name: '北京' },
+				{ value: 33, name: '山东' },
+				{ value: 33, name: '其他' }
+			];
+			data('province-statistical', '学院学生的省份比例表', list3);
+			var payData = ['0-3', '3-4', '4-5', '5-6', '6-7', '7-8'];
+			var moneyList = [3900, 4500, 4800, 5000, 5050, 5100];
+			var personList = [22, 16, 29, 7, 5, 3];
+			var payData1 = ['2013', '2014', '2015', '2016', '2017', '2018'];
+			payInfoData('payInfo', '就业薪资工资区间统计表', payData, '人', '千元', personList);
+			payInfoData('payInfo1', '学院历年就业学生的平均薪资统计表', payData1, '元', '年', moneyList);
+
+			var aData1 = [
+				{ value: 5, name: '农林业' },
+				{ value: 18, name: '互联网' },
+				{ value: 12, name: '金融' },
+				{ value: 20, name: '建筑' },
+				{ value: 15, name: '服务行业' },
+				{ value: 16, name: '事业机关单位' },
+				{ value: 8, name: '教育科研' },
+				{ value: 6, name: '其他' }
+			]
+			var aData2 = [
+				{ value: 5, name: '国企' },
+				{ value: 18, name: '民营' },
+				{ value: 12, name: '合资' },
+				{ value: 26, name: '其他' },
+				{ value: 15, name: '事业单位' },
+				{ value: 16, name: '政府机关' },
+				{ value: 8, name: '自主创业' }
+			]
+			var aData3 = [
+				{ value: 80, name: '就业' },
+				{ value: 20, name: '考研' }
+			]
+			var aColor1 = ['#76afdf', '#cfe894', '#e89797', '#97e5b2', '#99a1ef', '#eee18c', '#e89797', '#94cee4'];
+			var aColor2 = ['#6C9BC7', '#b176cf', '#dd8f93', '#7ddbd1', '#7478d0', '#cf76c3', '#ddb48f'];
+			var aColor3 = ['#948ddb', '#8fe9b8'];
+			var aLeft = ['30%', '50%'];
+			var aRight = ['80%', '50%'];
+			getEcharts('employment_industry', '学生就业的所属行业统计表', aData1, aColor1, '所属行业', aLeft, '65%', '16%');
+			getEcharts('unit_properties', '学生就业单位性质的统计表', aData2, aColor2, '单位性质', aRight, '15%', '65%');
+			getEcharts('postgraduate_employment', '学生考研就业比例统计表', aData3, aColor3, '就业比例', aLeft, '65%', '16%');
+			getEchartsMap();
+
+			$('.info li').click(function() {
+				$(this).addClass("active").siblings().removeClass("active");
+				$('.basic .select').eq($("ul li").index(this)).addClass("active").siblings().removeClass("active")
+			});
+		</script>
+
+	</body>
+
+</html>

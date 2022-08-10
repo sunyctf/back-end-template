@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/TeacherInfo.css"/>
+	</head>
+	<body>
+		<div class="container flgure">
+			<div class="content">
+				<ul class="clearfix info">
+					<li class="active">专业课教师</li>
+					<li>副科教师</li>
+				</ul>
+				<div class="basic">
+					<div class="basicInfo select active">
+						<dl class="table-title">
+							<dt>序号</dt>
+							<dt>工号</dt>
+							<dt>姓名</dt>
+							<dt>电话号码</dt>
+							<dt>所教科目</dt>
+						</dl>
+						<dl>
+							<dd>01</dd>
+							<dd>201310202052</dd>
+							<dd>小王</dd>
+							<dd>11111111111</dd>
+							<dd>园林设计与管理</dd>
+						</dl>
+						<dl>
+							<dd>01</dd>
+							<dd>201310202052</dd>
+							<dd>小王</dd>
+							<dd>11111111111</dd>
+							<dd>园林设计与管理</dd>
+						</dl>
+						<dl>
+							<dd>01</dd>
+							<dd>201310202052</dd>
+							<dd>小王</dd>
+							<dd>11111111111</dd>
+							<dd>园林设计与管理</dd>
+						</dl>
+						<ol>
+							<li class="active">1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>&gt;</li>
+						</ol>
+						<!--<dl>
+							<dt>工号</dt>
+							<dd>201310202052</dd>
+							<dd>201310202052</dd>
+							<dd>201310202052</dd>
+						</dl>
+						<dl>
+							<dt>姓名</dt>
+							<dd>小王</dd>
+							<dd>小王</dd>
+							<dd>小王</dd>
+						</dl>
+						<dl>
+							<dt>电话号码</dt>
+							<dd>11111111111</dd>
+							<dd>11111111111</dd>
+							<dd>11111111111</dd>
+						</dl>
+						<dl>
+							<dt>所教科目</dt>
+							<dd>园林设计与管理</dd>
+							<dd>园林设计与管理</dd>
+							<dd>园林设计与管理</dd>
+						</dl>-->
+						<!--<ol>
+							<li>序号</li>
+							<li>工号</li>
+							<li>姓名</li>
+							<li>电话号码</li>
+							<li>所教科目</li>
+						</ol>
+						<ul>
+							<li>01</li>
+							<li>201310202052</li>
+							<li>小王</li>
+							<li>11111111111</li>
+							<li>园林设计与管理</li>
+						</ul>
+						<ul>
+							<li>01</li>
+							<li>201310202052</li>
+							<li>小王</li>
+							<li>11111111111</li>
+							<li>园林设计与管理</li>
+						</ul>
+						<ul>
+							<li>01</li>
+							<li>201310202052</li>
+							<li>小王</li>
+							<li>11111111111</li>
+							<li>园林设计与管理</li>
+						</ul>
+						<ul>
+							<li>01</li>
+							<li>201310202052</li>
+							<li>小王</li>
+							<li>11111111111</li>
+							<li>园林设计与管理</li>
+						</ul>-->
+					</div>
+					<div class="payInfo select">
+						<dl class="table-title">
+							<dt>序号</dt>
+							<dt>工号</dt>
+							<dt>姓名</dt>
+							<dt>电话号码</dt>
+							<dt>所教科目</dt>
+						</dl>
+						<dl>
+							<dd>01</dd>
+							<dd>201485856222</dd>
+							<dd>小李</dd>
+							<dd>11111111111</dd>
+							<dd>园林设计与管理</dd>
+						</dl>
+						<dl>
+							<dd>01</dd>
+							<dd>201485856222</dd>
+							<dd>小李</dd>
+							<dd>11111111111</dd>
+							<dd>园林设计与管理</dd>
+						</dl>
+						<dl>
+							<dd>01</dd>
+							<dd>201485856222</dd>
+							<dd>小李</dd>
+							<dd>11111111111</dd>
+							<dd>园林设计与管理</dd>
+						</dl>
+						<ol>
+							<li class="active">1</li>
+							<li>2</li>
+							<li>3</li>
+							<li>4</li>
+							<li>&gt;</li>
+						</ol>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('.info li').click(function() {
+				$(this).addClass("active").siblings().removeClass("active");
+				$('.basic .select').eq($("ul li").index(this)).addClass("active").siblings().removeClass("active")
+			});
+			$('.basicInfo ol').on('click','li',function(){
+				$(this).addClass('active').siblings().removeClass('active');
+			});
+			$('.payInfo ol').on('click','li',function(){
+				$(this).addClass('active').siblings().removeClass('active');
+			});
+		</script>
+	</body>
+</html>
